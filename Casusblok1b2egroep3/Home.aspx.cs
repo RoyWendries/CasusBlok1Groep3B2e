@@ -31,7 +31,7 @@ namespace Casusblok1b2egroep3
 
         protected void GrdVHome_SelectedIndexChanged(object sender, EventArgs e)
         {
-            S
+            
         }
     }
 }
