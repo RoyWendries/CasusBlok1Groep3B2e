@@ -72,6 +72,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
+    <Content Include="Inloggen.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +87,13 @@
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Uitloggen.aspx.cs">
+      <DependentUpon>Uitloggen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Uitloggen.aspx.designer.cs">
+      <DependentUpon>Uitloggen.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
