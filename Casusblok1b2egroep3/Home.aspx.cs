@@ -14,5 +14,24 @@ namespace Casusblok1b2egroep3
 
         }
 
+        protected void BtnVraag_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnUitleg_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnStelVraag_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void GrdVHome_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            S
+        }
     }
 }
