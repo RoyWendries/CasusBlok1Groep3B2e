@@ -21,5 +21,10 @@ namespace Casusblok1b2egroep3
             Response.Cookies.Add(cookie);
             Response.Redirect("Home.aspx");
         }
+
+        protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
+        {
+
+        }
     }
 }
