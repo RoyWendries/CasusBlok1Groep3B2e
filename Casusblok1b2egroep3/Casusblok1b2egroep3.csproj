@@ -70,6 +70,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Files\Img\InlogBackground.PNG" />
+    <Content Include="Files\Img\ZuydStudiehulp.PNG" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="Inloggen.aspx" />
