@@ -87,6 +87,13 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Inloggen.aspx.cs">
+      <DependentUpon>Inloggen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inloggen.aspx.designer.cs">
+      <DependentUpon>Inloggen.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Profiel.aspx.cs">
       <DependentUpon>Profiel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

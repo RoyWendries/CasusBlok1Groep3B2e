@@ -47,7 +47,7 @@
         <div>
             <asp:GridView ID="GrdVHome" runat="server" CssClass="auto-style4" OnSelectedIndexChanged="GrdVHome_SelectedIndexChanged">
             </asp:GridView>
-            S</div>
+            </div>
     </form>
 </body>
 </html>

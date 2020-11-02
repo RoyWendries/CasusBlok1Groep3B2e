@@ -11,7 +11,7 @@ namespace Casusblok1b2egroep3
 {
 
 
-    public partial class Profiel
+    public partial class Inloggen
     {
 
         /// <summary>

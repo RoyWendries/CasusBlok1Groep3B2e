@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Casusblok1b2egroep3
 {
-    public partial class Profiel : System.Web.UI.Page
+    public partial class Inloggen : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,6 +21,5 @@ namespace Casusblok1b2egroep3
             Response.Cookies.Add(cookie);
             Response.Redirect("Home.aspx");
         }
-
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Inloggen.aspx.cs" Inherits="Casusblok1b2egroep3.Profiel" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Inloggen.aspx.cs" Inherits="Casusblok1b2egroep3.Inloggen" %>
 
 <!DOCTYPE html>
 
@@ -9,6 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+                    <div>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBConnectionString %>" SelectCommand="SELECT [ID] FROM [tblUser] WHERE (([Email] = @Email) AND ([Password] = @Password))">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="txtbEmail" Name="Email" PropertyName="Text" />
@@ -34,6 +35,7 @@
             <br />
             <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
             <br />
+        </div>
         </div>
     </form>
 </body>
