@@ -11,7 +11,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <p>TEST</p>
+            <p>Hello Wesley je maakt je een beetje druk he?</p>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
