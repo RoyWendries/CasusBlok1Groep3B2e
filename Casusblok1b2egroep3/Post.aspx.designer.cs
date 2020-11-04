@@ -11,7 +11,7 @@ namespace Casusblok1b2egroep3
 {
 
 
-    public partial class Home
+    public partial class Post
     {
 
         /// <summary>
@@ -24,12 +24,30 @@ namespace Casusblok1b2egroep3
         protected global::System.Web.UI.WebControls.ListView ListView1;
 
         /// <summary>
-        /// SQLHomeLVTitels control.
+        /// SQLPostLV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SQLHomeLVTitels;
+        protected global::System.Web.UI.WebControls.SqlDataSource SQLPostLV;
+
+        /// <summary>
+        /// ListView2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView ListView2;
+
+        /// <summary>
+        /// SQLPostLVReacties control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SQLPostLVReacties;
     }
 }

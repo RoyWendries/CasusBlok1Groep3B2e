@@ -11,25 +11,25 @@ namespace Casusblok1b2egroep3
 {
 
 
-    public partial class Home
+    public partial class NestedMasterPage1
     {
 
         /// <summary>
-        /// ListView1 control.
+        /// panel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView ListView1;
+        protected global::System.Web.UI.WebControls.Panel panel1;
 
         /// <summary>
-        /// SQLHomeLVTitels control.
+        /// ChildContent1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SQLHomeLVTitels;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ChildContent1;
     }
 }

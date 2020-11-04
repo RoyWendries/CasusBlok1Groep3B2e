@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ZuydStudieHulp.Master.cs" Inherits="Casusblok1b2egroep3.Site1" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ZuydStudieHulpNavBar.Master.cs" Inherits="Casusblok1b2egroep3.Site1" %>
 
 <!DOCTYPE html>
 
@@ -14,7 +14,7 @@
     <form id="form1" runat="server">
         <div>
             <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white shadow">
-                <a class="my-0 mr-md-auto navbar-brand" href="#">
+                <a class="my-0 mr-md-auto navbar-brand" href="Home.aspx">
                     <img src="Files\Img\ZuydStudiehulp.PNG" height="30" class="d-inline-block align-top">
                 </a>
                 <nav class="my-2 my-md-0 mr-md-3">
@@ -24,8 +24,8 @@
                     <a class="p-2 text-dark" href="#">Uitloggen</a>
                     <% } %>
                     <% else
-                    {%>
-                   <a class="p-2 text-dark" href="Inloggen.aspx">Inloggen</a>
+                        {%>
+                    <a class="p-2 text-dark" href="Inloggen.aspx">Inloggen</a>
                     <a class="p-2 text-dark" href="Registreren.aspx">Registreren</a>
                     <% } %>
                 </nav>

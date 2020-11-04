@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/ZuydStudieHulp.Master" Title="Inloggen" AutoEventWireup="true" CodeBehind="Inloggen.aspx.cs" Inherits="Casusblok1b2egroep3.Inloggen" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/ZuydStudieHulpNavBar.Master" Title="Inloggen" AutoEventWireup="true" CodeBehind="Inloggen.aspx.cs" Inherits="Casusblok1b2egroep3.Inloggen" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row no-gutters">

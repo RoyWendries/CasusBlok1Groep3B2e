@@ -33,5 +33,15 @@ namespace Casusblok1b2egroep3
         {
             
         }
+
+        protected void ListVwHome_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void SQLHomeLVTitels_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        {
+
+        }
     }
 }

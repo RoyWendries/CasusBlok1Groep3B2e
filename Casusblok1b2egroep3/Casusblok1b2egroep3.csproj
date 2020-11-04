@@ -76,6 +76,7 @@
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="Inloggen.aspx" />
+    <Content Include="Post.aspx" />
     <Content Include="Profiel.aspx" />
     <Content Include="Registreren.aspx" />
     <Content Include="Web.config" />
@@ -98,6 +99,20 @@
     <Compile Include="Inloggen.aspx.designer.cs">
       <DependentUpon>Inloggen.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ZuydStudieHulpMain.master.cs">
+      <DependentUpon>ZuydStudieHulpMain.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZuydStudieHulpMain.master.designer.cs">
+      <DependentUpon>ZuydStudieHulpMain.master</DependentUpon>
+    </Compile>
+    <Compile Include="Post.aspx.cs">
+      <DependentUpon>Post.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Post.aspx.designer.cs">
+      <DependentUpon>Post.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Profiel.aspx.cs">
       <DependentUpon>Profiel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -113,12 +128,12 @@
     <Compile Include="Registreren.aspx.designer.cs">
       <DependentUpon>Registreren.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ZuydStudieHulp.Master.cs">
-      <DependentUpon>ZuydStudieHulp.Master</DependentUpon>
+    <Compile Include="ZuydStudieHulpNavBar.Master.cs">
+      <DependentUpon>ZuydStudieHulpNavBar.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ZuydStudieHulp.Master.designer.cs">
-      <DependentUpon>ZuydStudieHulp.Master</DependentUpon>
+    <Compile Include="ZuydStudieHulpNavBar.Master.designer.cs">
+      <DependentUpon>ZuydStudieHulpNavBar.Master</DependentUpon>
     </Compile>
     <Compile Include="Uitloggen.aspx.cs">
       <DependentUpon>Uitloggen.aspx</DependentUpon>
@@ -129,8 +144,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ZuydStudieHulpMain.master" />
     <None Include="packages.config" />
-    <Content Include="ZuydStudieHulp.Master" />
+    <Content Include="ZuydStudieHulpNavBar.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
