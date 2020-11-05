@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBConnectionString %>" SelectCommand="SELECT [ID] FROM [tblUser] WHERE (([Email] = @Email) AND ([Password] = @Password))">
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBDaVinci %>" SelectCommand="SELECT [ID] FROM [tblUser] WHERE (([Email] = @Email) AND ([Password] = @Password))">
                     <SelectParameters>
                         <asp:ControlParameter ControlID="txtbEmail" Name="Email" PropertyName="Text" />
                         <asp:ControlParameter ControlID="txtbPassword" Name="Password" PropertyName="Text" />
