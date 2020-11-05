@@ -13,5 +13,12 @@ namespace Casusblok1b2egroep3
         {
 
         }
+
+        protected void BtnSignUp_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+            }
+        }
     }
 }
