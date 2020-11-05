@@ -76,6 +76,7 @@
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="Inloggen.aspx" />
+    <Content Include="MakePost.aspx" />
     <Content Include="Post.aspx" />
     <Content Include="Profiel.aspx" />
     <Content Include="Registreren.aspx" />
@@ -98,6 +99,13 @@
     </Compile>
     <Compile Include="Inloggen.aspx.designer.cs">
       <DependentUpon>Inloggen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakePost.aspx.cs">
+      <DependentUpon>MakePost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakePost.aspx.designer.cs">
+      <DependentUpon>MakePost.aspx</DependentUpon>
     </Compile>
     <Compile Include="ZuydStudieHulpMain.master.cs">
       <DependentUpon>ZuydStudieHulpMain.master</DependentUpon>
