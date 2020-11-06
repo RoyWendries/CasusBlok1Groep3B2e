@@ -11,7 +11,10 @@ namespace Casusblok1b2egroep3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           if (Request.Cookies.Get("UserRoleID").Value != "1")
+                {
+                Response.Redirect("Home.aspx");
+                }
         }
     }
 }

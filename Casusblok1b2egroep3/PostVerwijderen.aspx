@@ -112,7 +112,7 @@
             </tr>
         </SelectedItemTemplate>
     </asp:ListView>
-    <asp:SqlDataSource ID="SQLPostVerwijderenLV" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBDaVinci %>" DeleteCommand="DELETE FROM [tblPost] WHERE [ID] = @ID" InsertCommand="INSERT INTO [tblPost] ([Subject], [Post]) VALUES (@Subject, @Post)" SelectCommand="SELECT [ID], [Subject], [Post] FROM [tblPost]" UpdateCommand="UPDATE [tblPost] SET [Subject] = @Subject, [Post] = @Post WHERE [ID] = @ID">
+    <asp:SqlDataSource ID="SQLPostVerwijderenLV" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBConnectionString %>" DeleteCommand="DELETE FROM [tblPost] WHERE [ID] = @ID" InsertCommand="INSERT INTO [tblPost] ([Subject], [Post]) VALUES (@Subject, @Post)" SelectCommand="SELECT [ID], [Subject], [Post] FROM [tblPost]" UpdateCommand="UPDATE [tblPost] SET [Subject] = @Subject, [Post] = @Post WHERE [ID] = @ID">
         <DeleteParameters>
             <asp:Parameter Name="ID" Type="Int32" />
         </DeleteParameters>

@@ -80,5 +80,8 @@
         </div>
         <asp:SqlDataSource ID="SQLHomeLVTitels" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBConnectionString %>" SelectCommand="SELECT [ID], [Subject], [HighFive] FROM [tblPost] ORDER BY [CreateDate]" OnSelecting="SQLHomeLVTitels_Selecting"></asp:SqlDataSource>
         <br />
-    </div>
-</asp:Content>
+        <div class="row mt-4 mb-4">
+            <div class="col text-center">
+                <% if (Request.Cookies.Get("UserRoleID").Value == "1")
+                    {%>
+                <asp:LinkButton ID="BtnVerwijderen" class="cbtn btn btn-danger" PostBackUrl="~/PostVerwijderen.aspx" runat="server">Post verwijderen</asp:LinkButton><% } %></div></div></div></asp:Content>
