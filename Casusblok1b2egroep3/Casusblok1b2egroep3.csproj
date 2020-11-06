@@ -70,6 +70,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MakeComment.aspx" />
     <Content Include="Files\Img\InlogBackground.PNG" />
     <Content Include="Files\Img\ZuydStudiehulp.PNG" />
     <Content Include="Files\Style.css" />
@@ -83,6 +84,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MakeComment.aspx.cs">
+      <DependentUpon>MakeComment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakeComment.aspx.designer.cs">
+      <DependentUpon>MakeComment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

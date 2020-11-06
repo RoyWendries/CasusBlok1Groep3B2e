@@ -24,6 +24,15 @@ namespace Casusblok1b2egroep3
         protected global::System.Web.UI.WebControls.Panel panel1;
 
         /// <summary>
+        /// BtnStelVraag control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnStelVraag;
+
+        /// <summary>
         /// ChildContent1 control.
         /// </summary>
         /// <remarks>

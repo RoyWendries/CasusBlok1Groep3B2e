@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="col col-lg-2">
-                <button type="button" class="cbtn btn btn-danger" id="BtnStelVraag">Stel een Vraag</button>
+                <asp:Button runat="server" class="cbtn btn btn-danger" id="BtnStelVraag" onclick="BtnStelVraag_Click" Text="Stel een Vraag" />
             </div>
         </div>
     </div>

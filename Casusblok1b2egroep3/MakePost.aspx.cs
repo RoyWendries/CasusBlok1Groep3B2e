@@ -29,6 +29,9 @@ namespace Casusblok1b2egroep3
 
         }
 
-
+        protected void BtnComment_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Comment.aspx");
+        }
     }
 }

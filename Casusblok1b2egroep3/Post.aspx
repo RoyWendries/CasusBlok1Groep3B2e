@@ -4,243 +4,231 @@
     <div class="text-center">
         <asp:ListView ID="ListView1" runat="server" DataSourceID="SQLPostLV">
             <AlternatingItemTemplate>
-                <span style="">Name:
-                <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' />
+                <td runat="server" style="">Name:
+                    <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' />
                     <br />
                     Subject:
-                <asp:Label ID="SubjectLabel" runat="server" Text='<%# Eval("Subject") %>' />
+                    <asp:Label ID="SubjectLabel" runat="server" Text='<%# Eval("Subject") %>' />
                     <br />
                     Post:
-                <asp:Label ID="PostLabel" runat="server" Text='<%# Eval("Post") %>' />
-                    <br />
-                    HighFives:
-                <asp:Label ID="HighFiveLabel" runat="server" Text='<%# Eval("HighFive") %>' />
-                    <br />
-                    Link:
-                <asp:Label ID="LinkLabel" runat="server" Text='<%# Eval("Link") %>' />
-                    <br />
-                    <br />
-                </span>
-            </AlternatingItemTemplate>
-            <EditItemTemplate>
-                <span style="">Name:
-                <asp:TextBox ID="NameTextBox" runat="server" Text='<%# Bind("Name") %>' />
-                    <br />
-                    Subject:
-                <asp:TextBox ID="SubjectTextBox" runat="server" Text='<%# Bind("Subject") %>' />
-                    <br />
-                    Post:
-                <asp:TextBox ID="PostTextBox" runat="server" Text='<%# Bind("Post") %>' />
+                    <asp:Label ID="PostLabel" runat="server" Text='<%# Eval("Post") %>' />
                     <br />
                     HighFive:
-                <asp:TextBox ID="HighFiveTextBox" runat="server" Text='<%# Bind("HighFive") %>' />
+                    <asp:Label ID="HighFiveLabel" runat="server" Text='<%# Eval("HighFive") %>' />
                     <br />
                     Link:
-                <asp:TextBox ID="LinkTextBox" runat="server" Text='<%# Bind("Link") %>' />
+                    <asp:Label ID="LinkLabel" runat="server" Text='<%# Eval("Link") %>' />
+                    <br />
+                </td>
+            </AlternatingItemTemplate>
+            <EditItemTemplate>
+                <td runat="server" style="">Name:
+                    <asp:TextBox ID="NameTextBox" runat="server" Text='<%# Bind("Name") %>' />
+                    <br />
+                    Subject:
+                    <asp:TextBox ID="SubjectTextBox" runat="server" Text='<%# Bind("Subject") %>' />
+                    <br />
+                    Post:
+                    <asp:TextBox ID="PostTextBox" runat="server" Text='<%# Bind("Post") %>' />
+                    <br />
+                    HighFive:
+                    <asp:TextBox ID="HighFiveTextBox" runat="server" Text='<%# Bind("HighFive") %>' />
+                    <br />
+                    Link:
+                    <asp:TextBox ID="LinkTextBox" runat="server" Text='<%# Bind("Link") %>' />
                     <br />
                     <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
                     <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
-                    <br />
-                    <br />
-                </span>
+                </td>
             </EditItemTemplate>
             <EmptyDataTemplate>
-                <span>No data was returned.</span>
+                <table style="">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
             </EmptyDataTemplate>
             <InsertItemTemplate>
-                <span style="">Name:
-                <asp:TextBox ID="NameTextBox" runat="server" Text='<%# Bind("Name") %>' />
+                <td runat="server" style="">Name:
+                    <asp:TextBox ID="NameTextBox" runat="server" Text='<%# Bind("Name") %>' />
                     <br />
                     Subject:
-                <asp:TextBox ID="SubjectTextBox" runat="server" Text='<%# Bind("Subject") %>' />
+                    <asp:TextBox ID="SubjectTextBox" runat="server" Text='<%# Bind("Subject") %>' />
                     <br />
                     Post:
-                <asp:TextBox ID="PostTextBox" runat="server" Text='<%# Bind("Post") %>' />
+                    <asp:TextBox ID="PostTextBox" runat="server" Text='<%# Bind("Post") %>' />
                     <br />
                     HighFive:
-                <asp:TextBox ID="HighFiveTextBox" runat="server" Text='<%# Bind("HighFive") %>' />
+                    <asp:TextBox ID="HighFiveTextBox" runat="server" Text='<%# Bind("HighFive") %>' />
                     <br />
                     Link:
-                <asp:TextBox ID="LinkTextBox" runat="server" Text='<%# Bind("Link") %>' />
+                    <asp:TextBox ID="LinkTextBox" runat="server" Text='<%# Bind("Link") %>' />
                     <br />
                     <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
                     <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
-                    <br />
-                    <br />
-                </span>
+                </td>
             </InsertItemTemplate>
             <ItemTemplate>
-                <span style="">Name:
-                <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' />
+                <td runat="server" style="">Name:
+                    <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' />
                     <br />
                     Subject:
-                <asp:Label ID="SubjectLabel" runat="server" Text='<%# Eval("Subject") %>' />
+                    <asp:Label ID="SubjectLabel" runat="server" Text='<%# Eval("Subject") %>' />
                     <br />
                     Post:
-                <asp:Label ID="PostLabel" runat="server" Text='<%# Eval("Post") %>' />
+                    <asp:Label ID="PostLabel" runat="server" Text='<%# Eval("Post") %>' />
                     <br />
-                    HighFives:
-                <asp:Label ID="HighFiveLabel" runat="server" Text='<%# Eval("HighFive") %>' />
+                    HighFive:
+                    <asp:Label ID="HighFiveLabel" runat="server" Text='<%# Eval("HighFive") %>' />
                     <br />
                     Link:
-                <asp:Label ID="LinkLabel" runat="server" Text='<%# Eval("Link") %>' />
+                    <asp:Label ID="LinkLabel" runat="server" Text='<%# Eval("Link") %>' />
                     <br />
-                    <br />
-                </span>
+                </td>
             </ItemTemplate>
             <LayoutTemplate>
-                <div id="itemPlaceholderContainer" runat="server" style="">
-                    <span runat="server" id="itemPlaceholder" />
-                </div>
+                <table runat="server" border="0" style="">
+                    <tr id="itemPlaceholderContainer" runat="server">
+                        <td id="itemPlaceholder" runat="server"></td>
+                    </tr>
+                </table>
                 <div style="">
                 </div>
             </LayoutTemplate>
             <SelectedItemTemplate>
-                <span style="">Name:
-                <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' />
+                <td runat="server" style="">Name:
+                    <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' />
                     <br />
                     Subject:
-                <asp:Label ID="SubjectLabel" runat="server" Text='<%# Eval("Subject") %>' />
+                    <asp:Label ID="SubjectLabel" runat="server" Text='<%# Eval("Subject") %>' />
                     <br />
                     Post:
-                <asp:Label ID="PostLabel" runat="server" Text='<%# Eval("Post") %>' />
+                    <asp:Label ID="PostLabel" runat="server" Text='<%# Eval("Post") %>' />
                     <br />
                     HighFive:
-                <asp:Label ID="HighFiveLabel" runat="server" Text='<%# Eval("HighFive") %>' />
+                    <asp:Label ID="HighFiveLabel" runat="server" Text='<%# Eval("HighFive") %>' />
                     <br />
                     Link:
-                <asp:Label ID="LinkLabel" runat="server" Text='<%# Eval("Link") %>' />
+                    <asp:Label ID="LinkLabel" runat="server" Text='<%# Eval("Link") %>' />
                     <br />
-                    <br />
-                </span>
+                </td>
             </SelectedItemTemplate>
         </asp:ListView>
     </div>
-    <asp:SqlDataSource ID="SQLPostLV" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBDaVinci %>" SelectCommand="SELECT tblUser.Name, tblPost.Subject, tblPost.Post, tblPost.HighFive, tblPost.Link FROM tblUser INNER JOIN tblPost ON tblUser.ID = tblPost.[User] WHERE (tblPost.ID = @ID)">
-        <SelectParameters>
-            <asp:QueryStringParameter Name="ID" QueryStringField="ID" />
-        </SelectParameters>
-    </asp:SqlDataSource>
     <div class="text-center">
-        <asp:ListView ID="ListView2" runat="server" DataSourceID="SQLPostLVReacties">
+        <asp:SqlDataSource ID="SQLPostLV" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBDaVinci %>" SelectCommand="SELECT tblUser.Name, tblPost.Subject, tblPost.Post, tblPost.HighFive, tblPost.Link FROM tblPost INNER JOIN tblUser ON tblPost.[User] = tblUser.ID WHERE (tblPost.ID = @ID)">
+            <SelectParameters>
+                <asp:QueryStringParameter Name="ID" QueryStringField="ID" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+        <asp:ListView ID="ListView2" runat="server" DataSourceID="SQLPostLVComment">
             <AlternatingItemTemplate>
-                <span style="">Name:
-                <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' />
-                    <br />
-                    Comment:
-                <asp:Label ID="CommentLabel" runat="server" Text='<%# Eval("Comment") %>' />
-                    <br />
-                    HighFives:
-                <asp:Label ID="HighFiveLabel" runat="server" Text='<%# Eval("HighFive") %>' />
-                    <br />
-                    Reactie:
-                <asp:Label ID="SubCommentLabel" runat="server" Text='<%# Eval("SubComment") %>' />
-                    <br />
-                    HighFives:
-                <asp:Label ID="Expr1Label" runat="server" Text='<%# Eval("Expr1") %>' />
-                    <br />
-                    <br />
-                </span>
-            </AlternatingItemTemplate>
-            <EditItemTemplate>
-                <span style="">Name:
-                <asp:TextBox ID="NameTextBox" runat="server" Text='<%# Bind("Name") %>' />
-                    <br />
-                    Comment:
-                <asp:TextBox ID="CommentTextBox" runat="server" Text='<%# Bind("Comment") %>' />
+                <td runat="server" style="">Comment:
+                    <asp:Label ID="CommentLabel" runat="server" Text='<%# Eval("Comment") %>' />
                     <br />
                     HighFive:
-                <asp:TextBox ID="HighFiveTextBox" runat="server" Text='<%# Bind("HighFive") %>' />
+                    <asp:Label ID="HighFiveLabel" runat="server" Text='<%# Eval("HighFive") %>' />
                     <br />
-                    SubComment:
-                <asp:TextBox ID="SubCommentTextBox" runat="server" Text='<%# Bind("SubComment") %>' />
+                    Reaction:
+                    <asp:Label ID="ReactionLabel" runat="server" Text='<%# Eval("Reaction") %>' />
                     <br />
-                    Expr1:
-                <asp:TextBox ID="Expr1TextBox" runat="server" Text='<%# Bind("Expr1") %>' />
+                    Highfives:
+                    <asp:Label ID="HighfivesLabel" runat="server" Text='<%# Eval("Highfives") %>' />
+                    <br />
+                </td>
+            </AlternatingItemTemplate>
+            <EditItemTemplate>
+                <td runat="server" style="">Comment:
+                    <asp:TextBox ID="CommentTextBox" runat="server" Text='<%# Bind("Comment") %>' />
+                    <br />
+                    HighFive:
+                    <asp:TextBox ID="HighFiveTextBox" runat="server" Text='<%# Bind("HighFive") %>' />
+                    <br />
+                    Reaction:
+                    <asp:TextBox ID="ReactionTextBox" runat="server" Text='<%# Bind("Reaction") %>' />
+                    <br />
+                    Highfives:
+                    <asp:TextBox ID="HighfivesTextBox" runat="server" Text='<%# Bind("Highfives") %>' />
                     <br />
                     <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
                     <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
-                    <br />
-                    <br />
-                </span>
+                </td>
             </EditItemTemplate>
             <EmptyDataTemplate>
-                <span></span>
+                <table style="">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
             </EmptyDataTemplate>
             <InsertItemTemplate>
-                <span style="">Name:
-                <asp:TextBox ID="NameTextBox" runat="server" Text='<%# Bind("Name") %>' />
-                    <br />
-                    Comment:
-                <asp:TextBox ID="CommentTextBox" runat="server" Text='<%# Bind("Comment") %>' />
+                <td runat="server" style="">Comment:
+                    <asp:TextBox ID="CommentTextBox" runat="server" Text='<%# Bind("Comment") %>' />
                     <br />
                     HighFive:
-                <asp:TextBox ID="HighFiveTextBox" runat="server" Text='<%# Bind("HighFive") %>' />
+                    <asp:TextBox ID="HighFiveTextBox" runat="server" Text='<%# Bind("HighFive") %>' />
                     <br />
-                    SubComment:
-                <asp:TextBox ID="SubCommentTextBox" runat="server" Text='<%# Bind("SubComment") %>' />
+                    Reaction:
+                    <asp:TextBox ID="ReactionTextBox" runat="server" Text='<%# Bind("Reaction") %>' />
                     <br />
-                    Expr1:
-                <asp:TextBox ID="Expr1TextBox" runat="server" Text='<%# Bind("Expr1") %>' />
+                    Highfives:
+                    <asp:TextBox ID="HighfivesTextBox" runat="server" Text='<%# Bind("Highfives") %>' />
                     <br />
                     <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
                     <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
-                    <br />
-                    <br />
-                </span>
+                </td>
             </InsertItemTemplate>
             <ItemTemplate>
-                <span style="">Name:
-                <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' />
+                <td runat="server" style="">Comment:
+                    <asp:Label ID="CommentLabel" runat="server" Text='<%# Eval("Comment") %>' />
                     <br />
-                    Reactie:
-                <asp:Label ID="CommentLabel" runat="server" Text='<%# Eval("Comment") %>' />
+                    HighFive:
+                    <asp:Label ID="HighFiveLabel" runat="server" Text='<%# Eval("HighFive") %>' />
                     <br />
-                    HighFives:
-                <asp:Label ID="HighFiveLabel" runat="server" Text='<%# Eval("HighFive") %>' />
+                    Reaction:
+                    <asp:Label ID="ReactionLabel" runat="server" Text='<%# Eval("Reaction") %>' />
                     <br />
+                    Highfives:
+                    <asp:Label ID="HighfivesLabel" runat="server" Text='<%# Eval("Highfives") %>' />
                     <br />
-                    <br />
-                    Reactie:
-                <asp:Label ID="SubCommentLabel" runat="server" Text='<%# Eval("SubComment") %>' />
-                    <br />
-                    HighFives:
-                <asp:Label ID="Expr1Label" runat="server" Text='<%# Eval("Expr1") %>' />
-                    <br />
-                    <br />
-                </span>
+                </td>
             </ItemTemplate>
             <LayoutTemplate>
-                <div id="itemPlaceholderContainer" runat="server" style="">
-                    <span runat="server" id="itemPlaceholder" />
-                </div>
+                <table runat="server" border="0" style="">
+                    <tr id="itemPlaceholderContainer" runat="server">
+                        <td id="itemPlaceholder" runat="server"></td>
+                    </tr>
+                </table>
                 <div style="">
                 </div>
             </LayoutTemplate>
             <SelectedItemTemplate>
-                <span style="">:
-                <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' />
+                <td runat="server" style="">Comment:
+                    <asp:Label ID="CommentLabel" runat="server" Text='<%# Eval("Comment") %>' />
                     <br />
-                    Comment:
-                <asp:Label ID="CommentLabel" runat="server" Text='<%# Eval("Comment") %>' />
+                    HighFive:
+                    <asp:Label ID="HighFiveLabel" runat="server" Text='<%# Eval("HighFive") %>' />
                     <br />
-                    HighFives:
-                <asp:Label ID="HighFiveLabel" runat="server" Text='<%# Eval("HighFive") %>' />
+                    Reaction:
+                    <asp:Label ID="ReactionLabel" runat="server" Text='<%# Eval("Reaction") %>' />
                     <br />
-                    Reactie:
-                <asp:Label ID="SubCommentLabel" runat="server" Text='<%# Eval("SubComment") %>' />
+                    Highfives:
+                    <asp:Label ID="HighfivesLabel" runat="server" Text='<%# Eval("Highfives") %>' />
                     <br />
-                    HighFives:
-                <asp:Label ID="Expr1Label" runat="server" Text='<%# Eval("Expr1") %>' />
-                    <br />
-                    <br />
-                </span>
+                </td>
             </SelectedItemTemplate>
         </asp:ListView>
+        <asp:SqlDataSource ID="SQLPostLVComment" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBDaVinci %>" SelectCommand="SELECT tblComment.Comment, tblComment.HighFive, tblReaction.Reaction, tblReaction.HighFive AS Highfives FROM tblPost INNER JOIN tblPostComment ON tblPost.ID = tblPostComment.PostID INNER JOIN tblComment ON tblPostComment.CommentID = tblComment.ID INNER JOIN CommentReaction ON tblComment.ID = CommentReaction.CommentID INNER JOIN tblReaction ON CommentReaction.ReactionID = tblReaction.ID WHERE (tblPost.ID = @ID)">
+            <SelectParameters>
+                <asp:QueryStringParameter Name="ID" QueryStringField="ID" />
+            </SelectParameters>
+        </asp:SqlDataSource>
     </div>
-    <asp:SqlDataSource ID="SQLPostLVReacties" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBDaVinci %>" SelectCommand="SELECT tblUser.Name, tblComment.Comment, tblComment.HighFive, tblSubComment.SubComment, tblSubComment.HighFive AS Expr1 FROM tblComment INNER JOIN tblUser ON tblComment.[User] = tblUser.ID INNER JOIN tblSubComment ON tblComment.ID = tblSubComment.Comment WHERE (tblComment.Post = @ID)">
-        <SelectParameters>
-            <asp:QueryStringParameter DefaultValue="" Name="ID" QueryStringField="ID" />
-        </SelectParameters>
-    </asp:SqlDataSource>
+    <div class="row">
+        <div class="col text-center"">
+            <asp:Button runat="server" class="cbtn btn btn-danger" ID="BtnComment" OnClick="BtnComment_Click" Text="Stuur een Comment" />
+        </div>
+    </div>
+    <br />
+
 </asp:Content>

@@ -42,12 +42,21 @@ namespace Casusblok1b2egroep3
         protected global::System.Web.UI.WebControls.ListView ListView2;
 
         /// <summary>
-        /// SQLPostLVReacties control.
+        /// SQLPostLVComment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SQLPostLVReacties;
+        protected global::System.Web.UI.WebControls.SqlDataSource SQLPostLVComment;
+
+        /// <summary>
+        /// BtnComment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnComment;
     }
 }

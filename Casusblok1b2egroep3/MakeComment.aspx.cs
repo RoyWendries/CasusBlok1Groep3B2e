@@ -7,16 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Casusblok1b2egroep3
 {
-    public partial class NestedMasterPage1 : System.Web.UI.MasterPage
+    public partial class Comment : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void BtnStelVraag_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("MakePost.aspx");
         }
     }
 }
