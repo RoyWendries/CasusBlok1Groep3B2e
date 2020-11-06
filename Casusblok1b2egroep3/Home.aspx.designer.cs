@@ -31,5 +31,14 @@ namespace Casusblok1b2egroep3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SQLHomeLVTitels;
+
+        /// <summary>
+        /// BtnVerwijderen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton BtnVerwijderen;
     }
 }
