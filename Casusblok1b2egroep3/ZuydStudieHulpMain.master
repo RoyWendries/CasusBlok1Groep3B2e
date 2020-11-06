@@ -14,8 +14,8 @@
         <div class="row mt-4 mb-4">
             <div class="col">
                 <div class="form-group d-flex justify-content-center">
-                    <input class="form-control" type="text" placeholder="Zoek naar antwoorden" id="InpSearch">
-                    <button type="button" class="btn btn-secondary" id="BtnSearch">Search</button>
+                    <asp:TextBox ID="InpSearch" class="form-control" type="text" placeholder="Zoek naar antwoorden" runat="server"></asp:TextBox>
+                    <asp:Button ID="BtnSearch" class="btn btn-secondary" runat="server" OnClick="ButtonSearch" Text="Zoeken" />
                 </div>
             </div>
             <div class="col col-lg-2">
@@ -25,4 +25,3 @@
     </div>
     <asp:ContentPlaceHolder ID="ChildContent1" runat="server" />
 </asp:Content>
-

@@ -13,5 +13,10 @@ namespace Casusblok1b2egroep3
         {
 
         }
+
+        protected void ButtonSearch(object sender, EventArgs e)
+        {
+            Response.Redirect("Zoeken.aspx?q=" + InpSearch.Text);
+        }
     }
 }
