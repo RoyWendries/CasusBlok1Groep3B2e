@@ -78,7 +78,9 @@
     <Content Include="Home.aspx" />
     <Content Include="Inloggen.aspx" />
     <Content Include="MakePost.aspx" />
+    <Content Include="MakeReaction.aspx" />
     <Content Include="Post.aspx" />
+    <Content Include="PostVerwijderen.aspx" />
     <Content Include="Profiel.aspx" />
     <Content Include="Registreren.aspx" />
     <Content Include="Web.config" />
@@ -114,6 +116,20 @@
     </Compile>
     <Compile Include="MakePost.aspx.designer.cs">
       <DependentUpon>MakePost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakeReaction.aspx.cs">
+      <DependentUpon>MakeReaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakeReaction.aspx.designer.cs">
+      <DependentUpon>MakeReaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PostVerwijderen.aspx.cs">
+      <DependentUpon>PostVerwijderen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostVerwijderen.aspx.designer.cs">
+      <DependentUpon>PostVerwijderen.aspx</DependentUpon>
     </Compile>
     <Compile Include="Zoeken.aspx.cs">
       <DependentUpon>Zoeken.aspx</DependentUpon>

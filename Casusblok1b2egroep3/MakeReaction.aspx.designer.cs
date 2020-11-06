@@ -11,8 +11,26 @@ namespace Casusblok1b2egroep3
 {
 
 
-    public partial class Comment
+    public partial class MakeReaction
     {
+
+        /// <summary>
+        /// DDLSelectComment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DDLSelectComment;
+
+        /// <summary>
+        /// SQLMakeReactionDDLSelectComment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SQLMakeReactionDDLSelectComment;
 
         /// <summary>
         /// DetailsView1 control.
@@ -24,13 +42,13 @@ namespace Casusblok1b2egroep3
         protected global::System.Web.UI.WebControls.DetailsView DetailsView1;
 
         /// <summary>
-        /// SQLMakeCommentDV control.
+        /// SQLMakeReactionDV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SQLMakeCommentDV;
+        protected global::System.Web.UI.WebControls.SqlDataSource SQLMakeReactionDV;
 
         /// <summary>
         /// SqlDataSource1 control.
