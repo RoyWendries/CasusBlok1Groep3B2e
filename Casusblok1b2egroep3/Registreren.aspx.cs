@@ -14,11 +14,10 @@ namespace Casusblok1b2egroep3
 
         }
 
-        protected void BtnSignUp_Click(object sender, EventArgs e)
+        public void CheckCheckBoxPrivacyPolicy(object o, ServerValidateEventArgs e)
         {
-            if (Page.IsValid)
-            {
-            }
+            e.IsValid = CheckBoxPrivacyPolicy.Checked;
         }
+
     }
 }

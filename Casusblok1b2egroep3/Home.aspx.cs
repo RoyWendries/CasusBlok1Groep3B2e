@@ -43,5 +43,10 @@ namespace Casusblok1b2egroep3
         {
 
         }
+
+        protected void ListView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

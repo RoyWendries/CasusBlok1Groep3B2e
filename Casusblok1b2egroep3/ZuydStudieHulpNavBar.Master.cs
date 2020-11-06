@@ -13,5 +13,11 @@ namespace Casusblok1b2egroep3
         {
 
         }
+        
+protected void SignOff_Click(object sender, EventArgs e)
+        {
+            Response.Cookies["UserID"].Expires = DateTime.Now.AddDays(-1);
+            Response.Redirect("Inloggen.aspx");
+        }
     }
 }

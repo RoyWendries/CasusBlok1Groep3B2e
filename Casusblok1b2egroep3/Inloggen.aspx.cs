@@ -16,15 +16,16 @@ namespace Casusblok1b2egroep3
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            HttpCookie cookie = new HttpCookie("UserID");
-            cookie.Value = GridView1.Rows[0].Cells[0].Text;
-            Response.Cookies.Add(cookie);
-            Response.Redirect("Home.aspx");
-        }
-
-        protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
-        {
-
+            if (DropDownList1.SelectedValue != "") {
+                HttpCookie cookie = new HttpCookie("UserID");
+                cookie.Value = DropDownList1.SelectedValue;
+                Response.Cookies.Add(cookie);
+                Response.Redirect("Home.aspx");
+            }
+            else
+            {
+                LabelFalseLogin.Text = "Logingegevens zijn onjuist.";
+            }
         }
     }
 }

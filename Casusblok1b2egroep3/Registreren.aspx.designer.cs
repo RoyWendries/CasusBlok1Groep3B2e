@@ -15,15 +15,6 @@ namespace Casusblok1b2egroep3
     {
 
         /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
         /// CompareValidatorPassword control.
         /// </summary>
         /// <remarks>
@@ -40,6 +31,15 @@ namespace Casusblok1b2egroep3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorEmail;
+
+        /// <summary>
+        /// RequiredFieldValidatorName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorName;
 
         /// <summary>
         /// RequiredFieldValidatorPassword control.
@@ -78,22 +78,22 @@ namespace Casusblok1b2egroep3
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidatorEmail;
 
         /// <summary>
-        /// CustomValidator1 control.
+        /// CustomValidatorPrivacyPolicy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidatorPrivacyPolicy;
 
         /// <summary>
-        /// ValidationSummary1 control.
+        /// ValidationSummary control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary;
 
         /// <summary>
         /// LabelEmail control.
@@ -112,6 +112,24 @@ namespace Casusblok1b2egroep3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtbEmail;
+
+        /// <summary>
+        /// LabelName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelName;
+
+        /// <summary>
+        /// txtbName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtbName;
 
         /// <summary>
         /// LabelPassword control.
@@ -150,13 +168,22 @@ namespace Casusblok1b2egroep3
         protected global::System.Web.UI.WebControls.TextBox txtbPassword2;
 
         /// <summary>
-        /// DropDownUserRoll control.
+        /// LabelUserRole control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownUserRoll;
+        protected global::System.Web.UI.WebControls.Label LabelUserRole;
+
+        /// <summary>
+        /// RadioButtonListUserRole control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonListUserRole;
 
         /// <summary>
         /// CheckBoxPrivacyPolicy control.
@@ -168,12 +195,21 @@ namespace Casusblok1b2egroep3
         protected global::System.Web.UI.WebControls.CheckBox CheckBoxPrivacyPolicy;
 
         /// <summary>
-        /// btnSignUp control.
+        /// DetailsView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSignUp;
+        protected global::System.Web.UI.WebControls.DetailsView DetailsView1;
+
+        /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

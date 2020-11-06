@@ -1,27 +1,32 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/ZuydStudieHulpMain.Master" Title="Home" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Casusblok1b2egroep3.Home" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="ChildContent1" runat="server">
-    <div>
+    <div class="container">
         <div class="text-center">
             <asp:ListView ID="ListView1" runat="server" DataSourceID="SQLHomeLVTitels" DataKeyNames="ID">
                 <AlternatingItemTemplate>
                     <span style="">
-                    <asp:Label ID="IDLabel" runat="server" visible="false" Text='<%# Eval("ID") %>' />
+                        <asp:Label ID="IDLabel" runat="server" Visible="false" Text='<%# Eval("ID") %>' />
                         <br />
                         Subject:
                     <asp:HyperLink ID="hyperlink" runat="server" NavigateUrl='<%# "~/Post.aspx?ID=" + Eval("ID") %>'>
                         <asp:Label ID="Label1" runat="server" Text='<%# Eval("Subject") %>' />
-                        </asp:HyperLink><br />HighFive: <asp:Label ID="HighFiveLabel" runat="server" Text='<%# Eval("HighFive") %>' />
+                    </asp:HyperLink><br />
+                        HighFive:
+                        <asp:Label ID="HighFiveLabel" runat="server" Text='<%# Eval("HighFive") %>' />
                         <br />
                         <br />
                     </span>
                 </AlternatingItemTemplate>
                 <EditItemTemplate>
-                    <span style="">ID: <asp:Label ID="IDLabel1" runat="server" Text='<%# Eval("ID") %>' />
+                    <span style="">ID:
+                        <asp:Label ID="IDLabel1" runat="server" Text='<%# Eval("ID") %>' />
                         <br />
-                        Subject: <asp:TextBox ID="SubjectTextBox" runat="server" Text='<%# Bind("Subject") %>' />
+                        Subject:
+                        <asp:TextBox ID="SubjectTextBox" runat="server" Text='<%# Bind("Subject") %>' />
                         <br />
-                        HighFive: <asp:TextBox ID="HighFiveTextBox" runat="server" Text='<%# Bind("HighFive") %>' />
+                        HighFive:
+                        <asp:TextBox ID="HighFiveTextBox" runat="server" Text='<%# Bind("HighFive") %>' />
                         <br />
                         <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
                         <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
@@ -30,10 +35,14 @@
                     </span>
                 </EditItemTemplate>
                 <EmptyDataTemplate>
-                    <span>No data was returned.</span></EmptyDataTemplate><InsertItemTemplate>
-                    <span style="">Subject: <asp:TextBox ID="SubjectTextBox" runat="server" Text='<%# Bind("Subject") %>' />
+                    <span>No data was returned.</span>
+                </EmptyDataTemplate>
+                <InsertItemTemplate>
+                    <span style="">Subject:
+                        <asp:TextBox ID="SubjectTextBox" runat="server" Text='<%# Bind("Subject") %>' />
                         <br />
-                        HighFive: <asp:TextBox ID="HighFiveTextBox" runat="server" Text='<%# Bind("HighFive") %>' />
+                        HighFive:
+                        <asp:TextBox ID="HighFiveTextBox" runat="server" Text='<%# Bind("HighFive") %>' />
                         <br />
                         <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
                         <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
@@ -43,11 +52,14 @@
                 </InsertItemTemplate>
                 <ItemTemplate>
                     <span style="">
-                        <asp:Label ID="IDLabel" runat="server" visible="false" Text='<%# Eval("ID") %>' />
+                        <asp:Label ID="IDLabel" runat="server" Visible="false" Text='<%# Eval("ID") %>' />
                         <br />
-                        Subject: <asp:HyperLink ID="hyperlink" runat="server" NavigateUrl='<%# "~/Post.aspx?ID=" + Eval("ID") %>'>
+                        Subject:
+                        <asp:HyperLink ID="hyperlink" runat="server" NavigateUrl='<%# "~/Post.aspx?ID=" + Eval("ID") %>'>
                             <asp:Label ID="Label1" runat="server" Text='<%# Eval("Subject") %>' />
-                        </asp:HyperLink><br />HighFive: <asp:Label ID="HighFiveLabel" runat="server" Text='<%# Eval("HighFive") %>' />
+                        </asp:HyperLink><br />
+                        HighFive:
+                        <asp:Label ID="HighFiveLabel" runat="server" Text='<%# Eval("HighFive") %>' />
                         <br />
                         <br />
                     </span>
@@ -59,7 +71,7 @@
                     <div style="">
                         <asp:DataPager ID="DataPager1" runat="server">
                             <Fields>
-                                <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowLastPageButton="True" />
+                                <asp:NextPreviousPagerField ShowFirstPageButton="true" ShowLastPageButton="true" FirstPageText="Eerste" LastPageText="Laatste" NextPageText="Volgende" PreviousPageText="Vorige" ButtonType="Button" ButtonCssClass="btn btn-danger" />
                             </Fields>
                         </asp:DataPager>
                     </div>
@@ -68,17 +80,18 @@
                     <span style="">
                         <asp:Label ID="IDLabel" runat="server" Text='<%# Eval("ID") %>' />
                         <br />
-                        
+
                         <asp:Label ID="SubjectLabel" runat="server" Text='<%# Eval("Subject") %>' />
                         <br />
-                        HighFive: <asp:Label ID="HighFiveLabel" runat="server" Text='<%# Eval("HighFive") %>' />
+                        HighFive:
+                        <asp:Label ID="HighFiveLabel" runat="server" Text='<%# Eval("HighFive") %>' />
                         <br />
                         <br />
                     </span>
                 </SelectedItemTemplate>
             </asp:ListView>
         </div>
-        <asp:SqlDataSource ID="SQLHomeLVTitels" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBDaVinci %>" SelectCommand="SELECT [ID], [Subject], [HighFive] FROM [tblPost] ORDER BY [CreateDate]" OnSelecting="SQLHomeLVTitels_Selecting"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SQLHomeLVTitels" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBConnectionString %>" SelectCommand="SELECT [ID], [Subject], [HighFive] FROM [tblPost] ORDER BY [CreateDate]" OnSelecting="SQLHomeLVTitels_Selecting"></asp:SqlDataSource>
         <br />
     </div>
 </asp:Content>

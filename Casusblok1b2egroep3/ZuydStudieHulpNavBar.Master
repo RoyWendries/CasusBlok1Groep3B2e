@@ -21,7 +21,7 @@
                     <% if (Request.Cookies.Get("UserID") != null)
                         {%>
                     <a class="p-2 text-dark" href="Profiel.aspx">Mijn profiel</a>
-                    <a class="p-2 text-dark" href="#">Uitloggen</a>
+                    <asp:LinkButton ID="SignOff" class="p-2 text-dark" runat="server" OnClick="SignOff_Click">Uitloggen</asp:LinkButton>
                     <% } %>
                     <% else
                         {%>

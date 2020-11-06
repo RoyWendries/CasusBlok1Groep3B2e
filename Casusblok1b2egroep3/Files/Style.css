@@ -35,3 +35,54 @@
     background-color: #ed1b34;
     mix-blend-mode: multiply;
 }
+
+.btn-vraag, .btn-uitleg {
+    padding: .375rem 3rem;
+    border-radius: 2rem;
+}
+
+.cbtn {
+    border-radius: 2rem;
+}
+
+.btn-vraag {
+    color: #fff;
+    background-color: #A2257C;
+    border-color: #A2257C;
+}
+
+.btn-vraag.focus, .btn-vraag:focus {
+    color: #fff;
+    background-color: #942271;
+    border-color: #942271;
+    box-shadow: 0 0 0 0.2rem rgba(162,37,124,.5)
+}
+
+.btn-vraag:hover {
+    color: #fff;
+    background-color: #9a2276;
+    border-color: #9a2276;
+}
+
+.btn-uitleg {
+    color: #fff;
+    background-color: #4EAE46;
+    border-color: #4EAE46;
+}
+
+.btn-uitleg.focus, .btn-uitleg:focus {
+    color: #fff;
+    background-color: #469c3f;
+    border-color: #469c3f;
+    box-shadow: 0 0 0 0.2rem rgba(78,174,70,.5);
+}
+
+.btn-uitleg:hover {
+    color: #fff;
+    background-color: #49a542;
+    border-color: #49a542;
+}
+
+.UserIDList {
+    display: none;
+}
