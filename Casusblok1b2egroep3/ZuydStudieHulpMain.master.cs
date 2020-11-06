@@ -11,7 +11,10 @@ namespace Casusblok1b2egroep3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            HttpCookie cookie = Request.Cookies.Get("UserID"); if (cookie == null)
+            {
+                Response.Redirect("Inloggen.aspx");
+            }
         }
 
         protected void ButtonSearch(object sender, EventArgs e)

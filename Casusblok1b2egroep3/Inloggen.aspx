@@ -26,8 +26,14 @@
                                 <asp:TextBox ID="txtbPassword" runat="server" TextMode="Password" AutoPostBack="True"></asp:TextBox>
                                 <br />
                                 <br />
-                                <div class="UserIDList"><asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="ID" DataValueField="ID">
-            </asp:DropDownList></div>
+                                <div class="UserIDList">
+                                    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="ID" DataValueField="ID">
+                                    </asp:DropDownList>
+                                </div>
+                                <div class="UserIDList">
+                                    <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource2" DataTextField="ID" DataValueField="ID">
+                                    </asp:DropDownList>
+                                </div>
                                 <br />
                                 <asp:Button ID="btnLogin" runat="server" class="btn btn-danger" Text="Login" OnClick="btnLogin_Click" />
                             </div>
@@ -36,6 +42,12 @@
                 </div>
                 <div>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBConnectionString %>" SelectCommand="SELECT [ID] FROM [tblUser] WHERE (([Email] = @Email) AND ([Password] = @Password))">
+                        <SelectParameters>
+                            <asp:ControlParameter ControlID="txtbEmail" Name="Email" PropertyName="Text" />
+                            <asp:ControlParameter ControlID="txtbPassword" Name="Password" PropertyName="Text" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBConnectionString %>" SelectCommand="SELECT tblUserRole.ID FROM tblUser INNER JOIN tblUserRole ON tblUser.Role = tblUserRole.ID WHERE (tblUser.Email = @Email) AND (tblUser.Password = @Password)">
                         <SelectParameters>
                             <asp:ControlParameter ControlID="txtbEmail" Name="Email" PropertyName="Text" />
                             <asp:ControlParameter ControlID="txtbPassword" Name="Password" PropertyName="Text" />

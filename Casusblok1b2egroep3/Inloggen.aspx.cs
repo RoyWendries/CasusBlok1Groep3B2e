@@ -20,6 +20,11 @@ namespace Casusblok1b2egroep3
                 HttpCookie cookie = new HttpCookie("UserID");
                 cookie.Value = DropDownList1.SelectedValue;
                 Response.Cookies.Add(cookie);
+
+                HttpCookie cookie2 = new HttpCookie("UserRoleID");
+                cookie2.Value = DropDownList2.SelectedValue;
+                Response.Cookies.Add(cookie2);
+
                 Response.Redirect("Home.aspx");
             }
             else

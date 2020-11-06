@@ -19,7 +19,15 @@
                 </div>
             </div>
             <div class="col col-lg-2">
-                <asp:Button runat="server" class="cbtn btn btn-danger" id="BtnStelVraag" onclick="BtnStelVraag_Click" Text="Stel een Vraag" />
+                <% string test = Convert.ToString(Request.Cookies.Get("UserRoleID")); %>
+                <% if (Request.Cookies.Get("UserRoleID").Value == "3")
+                    {%>
+                <asp:Button runat="server" class="cbtn btn btn-danger disabled" Text="Stel een Vraag" />
+                <% } %>
+                <% else
+                    {%>
+                <asp:Button runat="server" class="cbtn btn btn-danger" ID="BtnStelVraag" OnClick="BtnStelVraag_Click" Text="Stel een Vraag" />
+                <% } %>
             </div>
         </div>
     </div>

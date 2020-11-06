@@ -91,7 +91,7 @@
                 </SelectedItemTemplate>
             </asp:ListView>
         </div>
-        <asp:SqlDataSource ID="SQLHomeLVTitels" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBDaVinci %>" SelectCommand="SELECT [ID], [Subject], [HighFive] FROM [tblPost] ORDER BY [CreateDate]" OnSelecting="SQLHomeLVTitels_Selecting"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SQLHomeLVTitels" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBConnectionString %>" SelectCommand="SELECT [ID], [Subject], [HighFive] FROM [tblPost] ORDER BY [CreateDate]" OnSelecting="SQLHomeLVTitels_Selecting"></asp:SqlDataSource>
         <br />
     </div>
 </asp:Content>
