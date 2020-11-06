@@ -115,6 +115,13 @@
     <Compile Include="MakePost.aspx.designer.cs">
       <DependentUpon>MakePost.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Zoeken.aspx.cs">
+      <DependentUpon>Zoeken.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Zoeken.aspx.designer.cs">
+      <DependentUpon>Zoeken.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ZuydStudieHulpMain.master.cs">
       <DependentUpon>ZuydStudieHulpMain.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -151,15 +158,9 @@
     <Compile Include="ZuydStudieHulpNavBar.Master.designer.cs">
       <DependentUpon>ZuydStudieHulpNavBar.Master</DependentUpon>
     </Compile>
-    <Compile Include="Uitloggen.aspx.cs">
-      <DependentUpon>Uitloggen.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Uitloggen.aspx.designer.cs">
-      <DependentUpon>Uitloggen.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Zoeken.aspx" />
     <Content Include="ZuydStudieHulpMain.master" />
     <None Include="packages.config" />
     <Content Include="ZuydStudieHulpNavBar.Master" />

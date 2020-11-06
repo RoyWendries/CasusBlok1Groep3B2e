@@ -24,13 +24,22 @@ namespace Casusblok1b2egroep3
         protected global::System.Web.UI.WebControls.Panel panel1;
 
         /// <summary>
-        /// BtnStelVraag control.
+        /// InpSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnStelVraag;
+        protected global::System.Web.UI.WebControls.TextBox InpSearch;
+
+        /// <summary>
+        /// BtnSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnSearch;
 
         /// <summary>
         /// ChildContent1 control.
