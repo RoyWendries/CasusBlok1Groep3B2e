@@ -4,7 +4,7 @@
 
     <asp:DropDownList ID="DDLSelectComment" runat="server" AutoPostBack="True" DataSourceID="SQLMakeReactionDDLSelectComment" DataTextField="Comment" DataValueField="ID">
     </asp:DropDownList>
-    <asp:SqlDataSource ID="SQLMakeReactionDDLSelectComment" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBDaVinci %>" SelectCommand="SELECT tblComment.Comment, tblComment.ID FROM tblComment INNER JOIN tblPostComment ON tblComment.ID = tblPostComment.CommentID INNER JOIN tblPost ON tblPostComment.PostID = tblPost.ID WHERE (tblPost.ID = @ID)">
+    <asp:SqlDataSource ID="SQLMakeReactionDDLSelectComment" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBConnectionString %>" SelectCommand="SELECT tblComment.Comment, tblComment.ID FROM tblComment INNER JOIN tblPostComment ON tblComment.ID = tblPostComment.CommentID INNER JOIN tblPost ON tblPostComment.PostID = tblPost.ID WHERE (tblPost.ID = @ID)">
         <SelectParameters>
             <asp:QueryStringParameter Name="ID" QueryStringField="PostID" />
         </SelectParameters>
@@ -18,7 +18,7 @@
             <asp:CommandField ShowInsertButton="True" />
         </Fields>
     </asp:DetailsView>
-    <asp:SqlDataSource ID="SQLMakeReactionDV" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBDaVinci %>" DeleteCommand="DELETE FROM [tblReaction] WHERE [ID] = @ID" InsertCommand="INSERT INTO [tblReaction] ([User], [Reaction], [CreateDate]) VALUES (@User, @Reaction, GETDATE())" SelectCommand="SELECT [ID], [User], [Reaction] FROM [tblReaction]" UpdateCommand="UPDATE [tblReaction] SET [User] = @User, [Reaction] = @Reaction WHERE [ID] = @ID">
+    <asp:SqlDataSource ID="SQLMakeReactionDV" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBConnectionString %>" DeleteCommand="DELETE FROM [tblReaction] WHERE [ID] = @ID" InsertCommand="INSERT INTO [tblReaction] ([User], [Reaction], [CreateDate]) VALUES (@User, @Reaction, GETDATE())" SelectCommand="SELECT [ID], [User], [Reaction] FROM [tblReaction]" UpdateCommand="UPDATE [tblReaction] SET [User] = @User, [Reaction] = @Reaction WHERE [ID] = @ID">
         <DeleteParameters>
             <asp:Parameter Name="ID" Type="Int32" />
         </DeleteParameters>
@@ -32,7 +32,7 @@
             <asp:Parameter Name="ID" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBDaVinci %>" SelectCommand="SELECT ID + 1 AS ID FROM tblReaction ORDER BY ID DESC"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBConnectionString %>" SelectCommand="SELECT ID + 1 AS ID FROM tblReaction ORDER BY ID DESC"></asp:SqlDataSource>
     <asp:Label ID="LblZeker" runat="server" Text="Als u het zeker weet Click dan hier op insert."></asp:Label>
     <asp:DetailsView ID="DetailsView2" runat="server" AutoGenerateRows="False" DataKeyNames="CommentID,ReactionID" DataSourceID="SqlDataSource2" DefaultMode="Insert" Height="50px" Width="125px">
         <Fields>
@@ -41,7 +41,7 @@
             <asp:CommandField ShowInsertButton="True" />
         </Fields>
     </asp:DetailsView>
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBDaVinci %>" DeleteCommand="DELETE FROM [tblCommentReaction] WHERE [CommentID] = @CommentID AND [ReactionID] = @ReactionID" InsertCommand="INSERT INTO [tblCommentReaction] ([CommentID], [ReactionID]) VALUES (@CommentID, @ReactionID)" SelectCommand="SELECT * FROM [tblCommentReaction]">
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBConnectionString %>" DeleteCommand="DELETE FROM [tblCommentReaction] WHERE [CommentID] = @CommentID AND [ReactionID] = @ReactionID" InsertCommand="INSERT INTO [tblCommentReaction] ([CommentID], [ReactionID]) VALUES (@CommentID, @ReactionID)" SelectCommand="SELECT * FROM [tblCommentReaction]">
         <DeleteParameters>
             <asp:Parameter Name="CommentID" Type="Int32" />
             <asp:Parameter Name="ReactionID" Type="Int32" />

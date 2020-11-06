@@ -19,7 +19,6 @@
                 </div>
             </div>
             <div class="col col-lg-2">
-                <% string test = Convert.ToString(Request.Cookies.Get("UserRoleID")); %>
                 <% if (Request.Cookies.Get("UserRoleID").Value == "3")
                     {%>
                 <asp:Button runat="server" class="cbtn btn btn-danger disabled" Text="Stel een Vraag" />

@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/ZuydStudieHulpNavBar.Master" AutoEventWireup="true" CodeBehind="MakePost.aspx.cs" Inherits="Casusblok1b2egroep3.MakePost" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="ContentPlaceholder1" runat="server">
-    <asp:SqlDataSource ID="SQLMakePostDV" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBDaVinci %>" DeleteCommand="DELETE FROM [tblPost] WHERE [ID] = @ID" InsertCommand="INSERT INTO [tblPost] ([Subject], [Post], [User], [CreateDate]) VALUES (@Subject, @Post, @UserIDCookie, GETDATE())" SelectCommand="SELECT [Subject], [Post], [ID], [User] FROM [tblPost]" UpdateCommand="UPDATE [tblPost] SET [Subject] = @Subject, [Post] = @Post, [User] = @User WHERE [ID] = @ID">
+    <asp:SqlDataSource ID="SQLMakePostDV" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBConnectionString %>" DeleteCommand="DELETE FROM [tblPost] WHERE [ID] = @ID" InsertCommand="INSERT INTO [tblPost] ([Subject], [Post], [User], [CreateDate]) VALUES (@Subject, @Post, @UserIDCookie, GETDATE())" SelectCommand="SELECT [Subject], [Post], [ID], [User] FROM [tblPost]" UpdateCommand="UPDATE [tblPost] SET [Subject] = @Subject, [Post] = @Post, [User] = @User WHERE [ID] = @ID">
         <DeleteParameters>
             <asp:Parameter Name="ID" Type="Int32" />
         </DeleteParameters>

@@ -130,7 +130,7 @@
             </span>
         </SelectedItemTemplate>
     </asp:ListView>
-    <asp:SqlDataSource ID="SQLProfielLV" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBDaVinci %>" SelectCommand="SELECT tblUser.Name, tblUser.Password, tblUser.Email, tblStudyProgram.Program AS Opleiding, tblYear.Year AS Leerjaar, tblClass.Class AS Klas FROM tblClass FULL OUTER JOIN tblUser ON tblClass.ID = tblUser.Class FULL OUTER JOIN tblYear ON tblClass.Year = tblYear.ID FULL OUTER JOIN tblStudyProgram ON tblClass.Program = tblStudyProgram.ID WHERE (tblUser.ID = @UserID)">
+    <asp:SqlDataSource ID="SQLProfielLV" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBConnectionString %>" SelectCommand="SELECT tblUser.Name, tblUser.Password, tblUser.Email, tblStudyProgram.Program AS Opleiding, tblYear.Year AS Leerjaar, tblClass.Class AS Klas FROM tblClass FULL OUTER JOIN tblUser ON tblClass.ID = tblUser.Class FULL OUTER JOIN tblYear ON tblClass.Year = tblYear.ID FULL OUTER JOIN tblStudyProgram ON tblClass.Program = tblStudyProgram.ID WHERE (tblUser.ID = @UserID)">
         <SelectParameters>
             <asp:CookieParameter CookieName="UserID" Name="UserID" />
         </SelectParameters>
@@ -223,7 +223,7 @@
         </tr>
     </SelectedItemTemplate>
 </asp:ListView>
-<asp:SqlDataSource ID="SQLProfielLVOnderwijseenheden" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBDaVinci %>" SelectCommand="SELECT tblUser.Name AS Naam, tblLesson.Lesson AS Onderwijseenheid FROM tblUser INNER JOIN tblUserLesson ON tblUser.ID = tblUserLesson.UserID INNER JOIN tblLesson ON tblUserLesson.LessonID = tblLesson.ID WHERE (tblUser.ID = @UserID)">
+<asp:SqlDataSource ID="SQLProfielLVOnderwijseenheden" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBConnectionString %>" SelectCommand="SELECT tblUser.Name AS Naam, tblLesson.Lesson AS Onderwijseenheid FROM tblUser INNER JOIN tblUserLesson ON tblUser.ID = tblUserLesson.UserID INNER JOIN tblLesson ON tblUserLesson.LessonID = tblLesson.ID WHERE (tblUser.ID = @UserID)">
     <SelectParameters>
         <asp:CookieParameter CookieName="UserID" Name="UserID" />
     </SelectParameters>

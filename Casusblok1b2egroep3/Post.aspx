@@ -115,11 +115,11 @@
             </SelectedItemTemplate>
         </asp:ListView>
     </div>
-        <asp:SqlDataSource ID="SQLPostLV" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBDaVinci %>" SelectCommand="SELECT tblUser.Name, tblPost.Subject, tblPost.Post, tblPost.HighFive, tblPost.Link FROM tblPost INNER JOIN tblUser ON tblPost.[User] = tblUser.ID WHERE (tblPost.ID = @ID)">
-            <SelectParameters>
-                <asp:QueryStringParameter Name="ID" QueryStringField="ID" />
-            </SelectParameters>
-        </asp:SqlDataSource>
+    <asp:SqlDataSource ID="SQLPostLV" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBConnectionString %>" SelectCommand="SELECT tblUser.Name, tblPost.Subject, tblPost.Post, tblPost.HighFive, tblPost.Link FROM tblPost INNER JOIN tblUser ON tblPost.[User] = tblUser.ID WHERE (tblPost.ID = @ID)">
+        <SelectParameters>
+            <asp:QueryStringParameter Name="ID" QueryStringField="ID" />
+        </SelectParameters>
+    </asp:SqlDataSource>
     <div class="text-center">
         <asp:ListView ID="ListView2" runat="server" DataSourceID="SQLPostLVComment">
             <AlternatingItemTemplate>
@@ -218,7 +218,7 @@
                 </td>
             </SelectedItemTemplate>
         </asp:ListView>
-        <asp:SqlDataSource ID="SQLPostLVComment" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBDaVinci %>" SelectCommand="SELECT tblComment.Comment, tblComment.HighFive, tblReaction.Reaction, tblReaction.HighFive AS Highfives FROM tblPost FULL OUTER JOIN tblPostComment ON tblPost.ID = tblPostComment.PostID FULL OUTER JOIN tblComment ON tblPostComment.CommentID = tblComment.ID FULL OUTER JOIN tblCommentReaction ON tblComment.ID = tblCommentReaction.CommentID FULL OUTER JOIN tblReaction ON tblCommentReaction.ReactionID = tblReaction.ID WHERE (tblPost.ID = @ID)">
+        <asp:SqlDataSource ID="SQLPostLVComment" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBConnectionString %>" SelectCommand="SELECT tblComment.Comment, tblComment.HighFive, tblReaction.Reaction, tblReaction.HighFive AS Highfives FROM tblPost FULL OUTER JOIN tblPostComment ON tblPost.ID = tblPostComment.PostID FULL OUTER JOIN tblComment ON tblPostComment.CommentID = tblComment.ID FULL OUTER JOIN tblCommentReaction ON tblComment.ID = tblCommentReaction.CommentID FULL OUTER JOIN tblReaction ON tblCommentReaction.ReactionID = tblReaction.ID WHERE (tblPost.ID = @ID)">
             <SelectParameters>
                 <asp:QueryStringParameter Name="ID" QueryStringField="ID" />
             </SelectParameters>
@@ -226,7 +226,14 @@
     </div>
     <div class="row mt-4 mb-4">
         <div class="col text-center">
+            <% if (Request.Cookies.Get("UserRoleID").Value == "4")
+                {%>
+            <asp:Button runat="server" class="cbtn btn btn-danger disabled" Text="Stuur een Comment" />
+            <% } %>
+            <% else
+                {%>
             <asp:Button runat="server" class="cbtn btn btn-danger" ID="BtnComment" OnClick="BtnComment_Click" Text="Stuur een Comment" />
+            <% } %>
             <asp:Button runat="server" class="cbtn btn btn-danger" ID="BtnReaction" OnClick="BtnReaction_Click" Text="Stuur een Reactie op een Comment" />
         </div>
     </div>

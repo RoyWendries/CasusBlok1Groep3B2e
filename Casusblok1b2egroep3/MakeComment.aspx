@@ -10,7 +10,7 @@
             <asp:CommandField ShowInsertButton="True" />
         </Fields>
     </asp:DetailsView>
-    <asp:SqlDataSource ID="SQLMakeCommentDV" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBDaVinci %>" DeleteCommand="DELETE FROM [tblComment] WHERE [ID] = @ID" InsertCommand="INSERT INTO [tblComment] ([User], [Comment], [CreateDate]) VALUES (@User, @Comment, GETDATE())" SelectCommand="SELECT [User], [Comment], [ID] FROM [tblComment]" UpdateCommand="UPDATE [tblComment] SET [User] = @User, [Comment] = @Comment WHERE [ID] = @ID">
+    <asp:SqlDataSource ID="SQLMakeCommentDV" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBConnectionString %>" DeleteCommand="DELETE FROM [tblComment] WHERE [ID] = @ID" InsertCommand="INSERT INTO [tblComment] ([User], [Comment], [CreateDate]) VALUES (@User, @Comment, GETDATE())" SelectCommand="SELECT [User], [Comment], [ID] FROM [tblComment]" UpdateCommand="UPDATE [tblComment] SET [User] = @User, [Comment] = @Comment WHERE [ID] = @ID">
         <DeleteParameters>
             <asp:Parameter Name="ID" Type="Int32" />
         </DeleteParameters>
@@ -24,7 +24,7 @@
             <asp:Parameter Name="ID" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBDaVinci %>" SelectCommand="SELECT ID + 1 AS ID FROM tblComment ORDER BY ID DESC"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBConnectionString %>" SelectCommand="SELECT ID + 1 AS ID FROM tblComment ORDER BY ID DESC"></asp:SqlDataSource>
     <asp:Label ID="LblZeker" runat="server" Text="Als u het zeker weet Click dan hier op insert."></asp:Label>
     <asp:DetailsView ID="DetailsView2" runat="server" AutoGenerateRows="False" DataKeyNames="PostID,CommentID" DataSourceID="SqlDataSource2" DefaultMode="Insert" Height="50px" Width="125px">
         <Fields>
@@ -33,7 +33,7 @@
             <asp:CommandField ShowInsertButton="True" />
         </Fields>
     </asp:DetailsView>
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBDaVinci %>" DeleteCommand="DELETE FROM [tblPostComment] WHERE [PostID] = @PostID AND [CommentID] = @CommentID" InsertCommand="INSERT INTO [tblPostComment] ([PostID], [CommentID]) VALUES (@PostID, @CommentID)" SelectCommand="SELECT * FROM [tblPostComment]">
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:StudiehulpDBConnectionString %>" DeleteCommand="DELETE FROM [tblPostComment] WHERE [PostID] = @PostID AND [CommentID] = @CommentID" InsertCommand="INSERT INTO [tblPostComment] ([PostID], [CommentID]) VALUES (@PostID, @CommentID)" SelectCommand="SELECT * FROM [tblPostComment]">
         <DeleteParameters>
             <asp:Parameter Name="PostID" Type="Int32" />
             <asp:Parameter Name="CommentID" Type="Int32" />
