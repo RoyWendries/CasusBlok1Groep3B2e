@@ -18,5 +18,10 @@ namespace Casusblok1b2egroep3
         {
             Response.Redirect("Zoeken.aspx?q=" + InpSearch.Text);
         }
+
+        protected void BtnStelVraag_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MakePost.aspx");
+        }
     }
 }
