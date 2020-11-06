@@ -16,7 +16,14 @@ namespace Casusblok1b2egroep3
 
         protected void BtnComment_Click(object sender, EventArgs e)
         {
-            Response.Redirect("MakeComment.aspx");
+            String ID = Request.QueryString["ID"];
+            Response.Redirect("~/MakeComment.aspx?PostID=" + ID);
+        }
+
+        protected void BtnReaction_Click(object sender, EventArgs e)
+        {
+            String ID = Request.QueryString["ID"];
+            Response.Redirect("~/MakeReaction.aspx?PostID=" + ID);
         }
     }
 }
